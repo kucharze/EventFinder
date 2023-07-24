@@ -28,7 +28,7 @@ function Searchbar() {
     }
   return (
     <div className='search'>
-      <h1>Search form</h1>
+      <h1>Find Upcoming events based on your location</h1>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         <input type="text" value={search} 
             onChange={(e)=>{setSearch(e.target.value)}} 
