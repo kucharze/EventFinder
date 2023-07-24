@@ -8,6 +8,10 @@ function SearchList(props) {
   return (
     <div className='searchList'>
       <h1>Upcoming events in your area:</h1>
+      <h4>
+        If you do not see anything here, 
+        no planned events regarding your search criteria are upcomming
+        </h4>
       {
         state && (
 
