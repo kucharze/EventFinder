@@ -27,7 +27,7 @@ function Searchbar() {
         getData(search)
     }
   return (
-    <div>
+    <div className='search'>
       <h1>Search form</h1>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         <input type="text" value={search} 

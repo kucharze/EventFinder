@@ -6,7 +6,7 @@ import { AppContext } from '../contexts/app_context'
 function SearchList(props) {
     const {state} = useContext(AppContext)
   return (
-    <div>
+    <div className='searchList'>
       <h1>Upcoming events in your area:</h1>
       {
         state && state.map((item)=>{
