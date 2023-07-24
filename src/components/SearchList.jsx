@@ -9,7 +9,12 @@ function SearchList(props) {
     <div className='searchList'>
       <h1>Upcoming events in your area:</h1>
       {
-        state && state.map((item)=>{
+        state && (
+
+            state.length === 0 ? 
+            <h1>No events found</h1> :
+            
+            state.map((item)=>{
             if(item.stats.event_count != 0){
                 return <DisplayItem key={item.name} 
                 name={item.name} url={item.url}
@@ -18,7 +23,7 @@ function SearchList(props) {
                 />
             }
             
-        })
+        }))
       }
       {/* <DisplayItem/> */}
     </div>
