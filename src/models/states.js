@@ -53,11 +53,8 @@ const states = {
   northdakota: "nd",
   wisconsin: "wi",
   Kansas: "ks",
-  ohio: "oh",
-  ohio: "oh",
-  ohio: "oh",
+  northernmarianaislands: "mp",
+  wyoming: "wy",
 };
 
 module.exports = states;
-
-/*	Northern Mariana Islands	MP	Wyoming	WY */
