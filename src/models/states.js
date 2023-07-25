@@ -20,9 +20,9 @@ const states = [
   { colorado: "co" },
   { minnesota: "mn" },
   { southcarolina: "sc" },
-  { Connecticut: "ci" },
-  { ohio: "oh" },
-  { ohio: "oh" },
+  { connecticut: "ci" },
+  { mississippi: "ms" },
+  { southdakota: "sd" },
   { ohio: "oh" },
   { ohio: "oh" },
   { ohio: "oh" },
@@ -47,8 +47,7 @@ const states = [
 
 module.exports = states;
 
-/*Mississippi	MS	South Dakota	SD
-Delaware	DE	Missouri	MO	Tennessee	TN
+/*Delaware	DE	Missouri	MO	Tennessee	TN
 District of Columbia	DC	Montana	MT	Texas	TX
 Florida	FL	Nebraska	NE	Trust Territories	TT
 Georgia	GA	Nevada	NV	Utah	UT
