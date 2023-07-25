@@ -17,6 +17,7 @@ function SearchList(props) {
             
             state.map((item)=>{
             if(item.stats.event_count != 0){
+                //console.log('In search',item.image)
                 return <DisplayItem key={item.name} 
                 name={item.name} url={item.url}
                 address={item.address}
