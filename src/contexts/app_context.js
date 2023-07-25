@@ -5,9 +5,12 @@ export const AppContext = createContext();
 const AppContextProvider = (props) => {
   const [state, setState] = useState(null);
   const [performer, setPerformer] = useState(false);
+  const [city, setCity] = useState(true);
 
   return (
-    <AppContext.Provider value={{ state, setState, performer, setPerformer }}>
+    <AppContext.Provider
+      value={{ state, setState, performer, setPerformer, city, setCity }}
+    >
       {props.children}
     </AppContext.Provider>
   );

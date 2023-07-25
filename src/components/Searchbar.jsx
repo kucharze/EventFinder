@@ -6,7 +6,7 @@ import axios from "axios";
 //https://api.seatgeek.com/2/venues?city=atlanta&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56
 //performaers?slug=${person}
 function Searchbar() {
-    const {state, setState, setPerformer, performer} = useContext(AppContext)
+    const {state, setState, setPerformer, performer, city, setCity} = useContext(AppContext)
 
     const [search,setSearch] = useState('')
 
@@ -19,6 +19,23 @@ function Searchbar() {
 
         console.log(res.venues);
         setState(res.venues)
+    };
+
+    const getState = async (item) => {
+        try{
+            const dat = await axios.get(
+            `https://api.seatgeek.com/2/venues?state=${item}&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56`
+            );
+
+            const res = await dat.data;
+
+            console.log(res.venues);
+            setState(res.venues)
+        }
+        catch(err){
+            alert('Error searching for locations')
+        }
+       
     };
 
     const getPerson = async (item) => {
@@ -44,19 +61,27 @@ function Searchbar() {
             console.log("Search term",search)
             getPerson(search)
         }
-        else{
+        else if(city){
             getData(search)
+        }
+        else{
+            console.log("state")
+            getState(search)
         }
         
     }
   return (
     <div className='search'>
       <h1>Find Upcoming events based on location or performer</h1>
-      <button className='btn' onClick={()=>{setPerformer(false)}}>Search by Location</button>
+      <button className='btn' onClick={()=>{setPerformer(false); setCity(true)}}>Search by City</button>
+      <button className='btn' onClick={()=>{setCity(false); setPerformer(false)}}>Search by State</button>
       <button className='btn' onClick={()=>{setPerformer(true)}}>Search by Performer</button>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         {
-            !performer && <input type="text" value={search} 
+            (!performer && !city) && <h2>Please Use state abbreviation in search</h2>
+        }
+        {
+            (!performer && city) && <input type="text" value={search} 
             onChange={(e)=>{setSearch(e.target.value)}} 
             placeholder='Input City..'
         />
@@ -65,6 +90,12 @@ function Searchbar() {
             performer && <input type="text" value={search} 
             onChange={(e)=>{setSearch(e.target.value)}} 
             placeholder='Input Performer..'
+        />
+        }
+        {
+            (!performer && !city) && <input type="text" value={search} 
+            onChange={(e)=>{setSearch(e.target.value)}} 
+            placeholder='Input State..'
         />
         }
         
