@@ -20,12 +20,22 @@ body {
   background-color: lightgray;
 }
 
+.criteria {
+  background-color: black;
+  border: solid black;
+  display: flex;
+}
+
 .btn {
-  margin: 1em;
+  /* margin: 1em; */
   font-size: 25px;
-  height: 60px;
+  height: 80px;
   border-radius: 25px;
-  width: 300px;
+  width: 43%;
+}
+
+.btn:hover {
+  background-color: yellow;
 }
 
 .searchItem {
