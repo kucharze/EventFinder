@@ -2,7 +2,7 @@
   text-align: center;
   border: solid black;
   margin: 1em;
-  background-color: beige;
+  background-color: orange;
 }
 
 body {
@@ -32,10 +32,12 @@ body {
   height: 80px;
   border-radius: 25px;
   width: 43%;
+  background-color: brown;
+  color: gold;
 }
 
 .btn:hover {
-  background-color: yellow;
+  background-color: black;
 }
 
 .searchItem {
@@ -49,6 +51,7 @@ body {
   height: 60px;
   font-size: 25px;
   margin-right: 20px;
+  border-radius: 25px;
 }
 
 .submit {
