@@ -86,7 +86,7 @@ function Searchbar() {
       <Criteria/>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         {
-            (!performer && !city) && <h2>Please Use state abbreviation in search</h2>
+            // (!performer && !city) && <h2>Please Use state abbreviation in search</h2>
         }
         {
             (!performer && city) && <input type="text" value={search} 
