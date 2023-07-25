@@ -43,11 +43,15 @@ const states = {
   idaho: "id",
   newmexico: "nm",
   virginislands: "vi",
-  ohio: "oh",
-  ohio: "oh",
-  ohio: "oh",
-  ohio: "oh",
-  ohio: "oh",
+  illinois: "il",
+  newyork: "ny",
+  washington: "wa",
+  indiana: "in",
+  northcarolina: "NC",
+  westvirginia: "WV",
+  iowa: "IA",
+  northdakota: "nd",
+  wisconsin: "wi",
   ohio: "oh",
   ohio: "oh",
   ohio: "oh",
@@ -56,7 +60,4 @@ const states = {
 
 module.exports = states;
 
-/*Illinois	IL	New York	NY	Washington	WA
-Indiana	IN	North Carolina	NC	West Virginia	WV
-Iowa	IA	North Dakota	ND	Wisconsin	WI
-Kansas	KS	Northern Mariana Islands	MP	Wyoming	WY */
+/*	Kansas	KS	Northern Mariana Islands	MP	Wyoming	WY */
