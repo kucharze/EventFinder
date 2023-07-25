@@ -7,6 +7,8 @@ import states from '../models/states';
 
 //https://api.seatgeek.com/2/venues?city=atlanta&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56
 //performaers?slug=${person}
+// "https://api.seatgeek.com/2/performers?slug=pittsburgh-pirates&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56"
+
 function Searchbar() {
     const {state, setState, performer, city} = useContext(AppContext)
 
@@ -67,6 +69,11 @@ function Searchbar() {
     const handleSubmit = (e) =>{
         e.preventDefault();
         //console.log(state)
+        if(search===''){
+            alert('No search term detected')
+            return
+        }
+
         if(performer){
             console.log("Search term",search)
             getPerson(search)
