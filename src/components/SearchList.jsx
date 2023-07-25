@@ -5,13 +5,10 @@ import { AppContext } from '../contexts/app_context'
 
 function SearchList(props) {
     const {state} = useContext(AppContext)
+    let nums = 0
   return (
     <div className='searchList'>
       <h1>Upcoming events in your area:</h1>
-      <h4>
-        If you do not see anything here, 
-        no planned events regarding your search criteria are upcomming
-        </h4>
       {
         state && (
 
@@ -23,8 +20,17 @@ function SearchList(props) {
                 return <DisplayItem key={item.name} 
                 name={item.name} url={item.url}
                 address={item.address}
+                img={item.image}
                 numEvents = {item.stats.event_count}
                 />
+            }
+            else{
+                nums++;
+                console.log(nums)
+                if(nums===state.length){
+                    nums=0
+                    return <h2 key={'No events'}>No Upcoming events at found locations</h2>
+                }
             }
             
         }))
