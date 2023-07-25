@@ -5,7 +5,7 @@ function DisplayItem(props) {
   return (
     <div className='searchItem'>
       <h2>{props.name}</h2>
-      <h4>{props.address}</h4>
+      <h4>{props.address} {props.extend}</h4>
       {
         //For performers
         props.image && <img src={props.img}/>

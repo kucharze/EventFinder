@@ -20,6 +20,7 @@ function SearchList(props) {
                 return <DisplayItem key={item.name} 
                 name={item.name} url={item.url}
                 address={item.address}
+                extend={item.extended_address}
                 img={item.image}
                 numEvents = {item.stats.event_count}
                 />
