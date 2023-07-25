@@ -26,7 +26,8 @@ body {
 
 .criteria {
   /* background-color: beige; */
-  /* border: solid black; */
+  border-top: solid #777;
+  margin-bottom: 1em;
   display: flex;
 }
 
