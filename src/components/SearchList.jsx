@@ -26,7 +26,6 @@ function SearchList(props) {
             }
             else{
                 nums++;
-                console.log(nums)
                 if(nums===state.length){
                     nums=0
                     return <h2 key={'No events'}>No Upcoming events at found locations</h2>
