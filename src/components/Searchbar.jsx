@@ -3,11 +3,12 @@ import { useContext } from 'react'
 import { AppContext } from '../contexts/app_context'
 import axios from "axios";
 import Criteria from './Criteria';
+import states from '../models/states';
 
 //https://api.seatgeek.com/2/venues?city=atlanta&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56
 //performaers?slug=${person}
 function Searchbar() {
-    const {state, setState, setPerformer, performer, city, setCity} = useContext(AppContext)
+    const {state, setState, performer, city} = useContext(AppContext)
 
     const [search,setSearch] = useState('')
 
@@ -21,6 +22,14 @@ function Searchbar() {
         console.log(res.venues);
         setState(res.venues)
     };
+
+    const findState = (item) =>{
+        item = item.toLowerCase().replaceAll(' ', '')
+
+        console.log(item)
+        console.log(states[item])
+        getState(states[item])
+    }
 
     const getState = async (item) => {
         try{
@@ -67,7 +76,8 @@ function Searchbar() {
         }
         else{
             console.log("state")
-            getState(search)
+            // getState(search)
+            findState(search)
         }
         
     }
