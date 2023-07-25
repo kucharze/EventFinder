@@ -22,14 +22,19 @@ function Searchbar() {
     };
 
     const getPerson = async (item) => {
+        
+        item = item.replaceAll(' ','-')
+
+        console.log(item)
+        
         const dat = await axios.get(
-        `https://api.seatgeek.com/2/venues?city=${item}&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56`
+         `https://api.seatgeek.com/2/performers?slug=${item}&client_id=MzUxMzQ3NDV8MTY5MDIxMDg3Ni4wMzM0NDY2&client_secret=54ff34499e1de30d55b12348090f73527deafbb637cc69edf831681d1df80b56`
         );
 
         const res = await dat.data;
 
-        console.log(res.venues);
-        setState(res.venues)
+        console.log(res.performers);
+        setState(res.performers)
     };
 
     const handleSubmit = (e) =>{
@@ -37,6 +42,7 @@ function Searchbar() {
         //console.log(state)
         if(performer){
             console.log("Search term",search)
+            getPerson(search)
         }
         else{
             getData(search)
@@ -45,8 +51,7 @@ function Searchbar() {
     }
   return (
     <div className='search'>
-      <h1>Find Upcoming events based on your location</h1>
-      <h1>Have different parameters based on </h1>
+      <h1>Find Upcoming events based on location or performer</h1>
       <button onClick={()=>{setPerformer(false)}}>Search by Location</button>
       <button onClick={()=>{setPerformer(true)}}>Search by Performer</button>
       <form onSubmit={(e) => {handleSubmit(e)}}>
