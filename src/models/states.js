@@ -47,12 +47,12 @@ const states = {
   newyork: "ny",
   washington: "wa",
   indiana: "in",
-  northcarolina: "NC",
-  westvirginia: "WV",
-  iowa: "IA",
+  northcarolina: "nc",
+  westvirginia: "wv",
+  iowa: "ia",
   northdakota: "nd",
   wisconsin: "wi",
-  ohio: "oh",
+  Kansas: "ks",
   ohio: "oh",
   ohio: "oh",
   ohio: "oh",
@@ -60,4 +60,4 @@ const states = {
 
 module.exports = states;
 
-/*	Kansas	KS	Northern Mariana Islands	MP	Wyoming	WY */
+/*	Northern Mariana Islands	MP	Wyoming	WY */
