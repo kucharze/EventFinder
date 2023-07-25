@@ -6,6 +6,11 @@ function DisplayItem(props) {
     <div className='searchItem'>
       <h2>{props.name}</h2>
       <h4>{props.address}</h4>
+      {
+        //For performers
+        props.image && <img src={props.img}/>
+      }
+      
       <h4>Number of upcoming events: {props.numEvents}</h4>
       <Link to={props.url}>Click to browse tickets</Link>
     </div>
