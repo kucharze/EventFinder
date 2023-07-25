@@ -2,7 +2,7 @@
   text-align: center;
   border: solid black;
   margin: 1em;
-  background-color: orange;
+  background-color: beige;
 }
 
 body {
@@ -15,14 +15,14 @@ body {
 }
 
 .searchList {
-  border: solid blue;
+  /* border: solid black; */
   margin: 2em;
   background-color: lightgray;
 }
 
 .criteria {
-  background-color: black;
-  border: solid black;
+  /* background-color: beige; */
+  /* border: solid black; */
   display: flex;
 }
 
@@ -31,20 +31,22 @@ body {
   font-size: 25px;
   height: 80px;
   border-radius: 25px;
-  width: 43%;
-  background-color: brown;
-  color: gold;
+  border: none;
+  width: 35%;
+  background-color: beige;
+  /* color: gold; */
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: gold;
 }
 
 .searchItem {
-  border: solid green;
+  border: solid gray;
   margin: 2em;
   padding: 1em;
   font-size: 20px;
+  box-shadow: 5px 5px 5px 5px #777777;
 }
 
 .search input {
@@ -78,13 +80,4 @@ body {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

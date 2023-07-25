@@ -73,7 +73,7 @@ function Searchbar() {
     }
   return (
     <div className='search'>
-      <h1>Find Upcoming events based on location or performer</h1>
+      <h1>Upcoming events based on location or performer</h1>
       <Criteria/>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         {
