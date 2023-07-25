@@ -37,6 +37,15 @@ const states = {
   guam: "gu",
   newhampshire: "nh",
   vermont: "vt",
+  hawaii: "hi",
+  newjersey: "nj",
+  virginia: "va",
+  idaho: "id",
+  newmexico: "nm",
+  virginislands: "vi",
+  ohio: "oh",
+  ohio: "oh",
+  ohio: "oh",
   ohio: "oh",
   ohio: "oh",
   ohio: "oh",
@@ -47,9 +56,7 @@ const states = {
 
 module.exports = states;
 
-/*Hawaii	HI	New Jersey	NJ	Virginia	VA
-Idaho	ID	New Mexico	NM	Virgin Islands	VI
-Illinois	IL	New York	NY	Washington	WA
+/*Illinois	IL	New York	NY	Washington	WA
 Indiana	IN	North Carolina	NC	West Virginia	WV
 Iowa	IA	North Dakota	ND	Wisconsin	WI
 Kansas	KS	Northern Mariana Islands	MP	Wyoming	WY */
