@@ -52,8 +52,8 @@ function Searchbar() {
   return (
     <div className='search'>
       <h1>Find Upcoming events based on location or performer</h1>
-      <button onClick={()=>{setPerformer(false)}}>Search by Location</button>
-      <button onClick={()=>{setPerformer(true)}}>Search by Performer</button>
+      <button className='btn' onClick={()=>{setPerformer(false)}}>Search by Location</button>
+      <button className='btn' onClick={()=>{setPerformer(true)}}>Search by Performer</button>
       <form onSubmit={(e) => {handleSubmit(e)}}>
         {
             !performer && <input type="text" value={search} 
@@ -68,7 +68,7 @@ function Searchbar() {
         />
         }
         
-        <input type='submit'/>
+        <input type='submit' className='submit'/>
       </form>
     </div>
   )

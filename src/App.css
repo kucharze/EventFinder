@@ -2,6 +2,11 @@
   text-align: center;
   border: solid black;
   margin: 1em;
+  background-color: beige;
+}
+
+body {
+  background-color: darkblue;
 }
 
 .App-logo {
@@ -12,6 +17,13 @@
 .searchList {
   border: solid blue;
   margin: 2em;
+  background-color: lightgray;
+}
+
+.btn {
+  margin: 1em;
+  font-size: 25px;
+  height: 60px;
 }
 
 .searchItem {
@@ -22,9 +34,12 @@
 }
 
 .search input {
-  height: 50px;
+  height: 60px;
   font-size: 25px;
   margin-right: 20px;
+}
+
+.submit {
 }
 
 @media (prefers-reduced-motion: no-preference) {
